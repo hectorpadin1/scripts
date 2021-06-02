@@ -35,7 +35,6 @@ def _spoof(host, host_mac, gateway, gateway_mac, interface):
 		]
 		# mandamos los paquetes
 		[send(x, verbose=0, iface=interface) for x in packets]
-		# esperamos un poco, algunos dispositivos antiguos pueden tardar bastante en actualizar su tabla ARP
 		sleep(2)
 
 
